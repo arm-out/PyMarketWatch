@@ -73,8 +73,16 @@ def tweetNews(news):
 
         if lastSeenPassed:
             tweet = article["title"] + " " + article["url"]
-            print("Tweeting article...")     
-            twitter_api.update_status(status=tweet)
+            print("Tweeting article...")
+            # Exception Handling
+            try:     
+                twitter_api.update_status(status=tweet)
+            except:
+                continue
+        
+        time.sleep(120)
+    
+    return
 
     # Stores the last tweeted article onto file
     storeLastSeenTitle(FILE_NAME_NEWS, articles[0]["title"])
@@ -97,6 +105,8 @@ def marketOpenOrClose():
     # Tweets when the US market closes
     if (nyTime == closeTime and open == True):
         twitter_api.update_status("The US Market has now closed")
+    
+    return
         
 # Initializing message
 print('=================================')
@@ -109,5 +119,5 @@ while True:
     news = retrieveNews()
     tweetNews(news)
     marketOpenOrClose()
-    time.sleep(300)
+    time.sleep(15)
 
