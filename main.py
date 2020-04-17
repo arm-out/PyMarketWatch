@@ -3,13 +3,14 @@ import requests
 import time, calendar
 from datetime import datetime
 import pytz
+import os
 
-TWITTER_API_KEY = 'iSbU97tE2VqYVrqG4MssoLYq1'
-TWITTER_API_SECRET = 'PBmDkdOklq1TBLBbEOyMzLjdmNxMkOil1GFkZzpuNUDm1Okaeg'
-TWITTER_ACCESS_TOKEN = '1250156125053423619-7fiwAxBS057LGeDgB9tBKqmvlWRit5'
-TWITTER_ACCESS_SECRET = 'y4fFDoMcLG95FiFEZBMHNh1DjmDkOgTXHCpYdKLD4yu0O'
+TWITTER_API_KEY = os.environ.get(API_KEY)
+TWITTER_API_SECRET = os.environ.get(API_SECRET)
+TWITTER_ACCESS_TOKEN = os.environ.get(ACCESS_TOKEN)
+TWITTER_ACCESS_SECRET = os.environ.get(ACCESS_SECRET)
 
-NEWS_API_KEY = 'fa2dd98685aa42859cb353e4a66c7e94'
+NEWS_API_KEY = os.environ.get(NEWS_API)
 
 FILE_NAME_NEWS = 'last_seen_title.txt'
 
@@ -58,7 +59,7 @@ def tweetNews(news):
         if lastSeenPassed:
             tweet = article["title"] + " " + article["url"]
             print("Tweeting article...")     
-            #twitter_api.update_status(status=tweet)
+            twitter_api.update_status(status=tweet)
 
     storeLastSeenTitle(FILE_NAME_NEWS, articles[0]["title"])
 
