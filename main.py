@@ -5,12 +5,12 @@ from datetime import datetime
 import pytz
 import os
 
-TWITTER_API_KEY = os.environ.get['API_KEY']
-TWITTER_API_SECRET = os.environ.get['API_SECRET']
-TWITTER_ACCESS_TOKEN = os.environ.get['ACCESS_TOKEN']
-TWITTER_ACCESS_SECRET = os.environ.get['ACCESS_SECRET']
+TWITTER_API_KEY = os.environ.get('API_KEY')
+TWITTER_API_SECRET = os.environ.get('API_SECRET')
+TWITTER_ACCESS_TOKEN = os.environ.get('ACCESS_TOKEN')
+TWITTER_ACCESS_SECRET = os.environ.get('ACCESS_SECRET')
 
-NEWS_API_KEY = os.environ.get['NEWS_API']
+NEWS_API_KEY = os.environ.get('NEWS_API')
 
 FILE_NAME_NEWS = 'last_seen_title.txt'
 
