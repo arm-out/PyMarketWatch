@@ -4,7 +4,22 @@
 
 ### Introduction
 
-This is a simple twitter bot that aims to help you stay up to date on various business news. It implements the Twitter API along with using the News API to collect news titles and sources.
+This is a simple [twitter bot](https://twitter.com/PyMarketWatch) that aims to help you stay up to date on various business news. It implements the Twitter API along with using the News API to collect news titles and sources.
+
+### Features
+
+- Up to date 24/7 News stream from hundreds of trusted sources from around the world
+
+##### Coming soon
+
+- Instant breaking news
+- Subscribe to get breaking news straight to dm's
+- Sentiment analysis
+- Request news or specific ticker mentions by tweeting at the bot using the Bloomberg API
+
+##### Changelog
+
+Version 1.0.1 - General bug fixes
 
 ### Cloning and Setting up
 
@@ -30,14 +45,14 @@ TWITTER_ACCESS_TOKEN = os.environ.get('ACCESS_TOKEN')
 TWITTER_ACCESS_SECRET = os.environ.get('ACCESS_SECRET')
 ```
 
-These API keys are unique to every user and you will have to generate one for yourself at [developer.twitter.com](developer.twitter.com). Once you have generated your codes, simply replace the `os.environ.get('') `in each line with its respective code. The same would be done for the key of the News Api
+These API keys are unique to every user and you will have to generate one for yourself at [developer.twitter.com](https://developer.twitter.com). Once you have generated your codes, simply replace the `os.environ.get('') `in each line with its respective code. The same would be done for the key of the News Api
 
 ```python
 # API Key for News API
 NEWS_API_KEY = os.environ.get('NEWS_API')
 ```
 
-You can generate a key for this api at [newsapi.org](newsapi.org)
+You can generate a key for this api at [newsapi.org](https://newsapi.org)
 
 #### Deleting Extra Files
 
