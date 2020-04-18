@@ -81,8 +81,6 @@ def tweetNews(news):
                 continue
         
         time.sleep(120)
-    
-    return
 
     # Stores the last tweeted article onto file
     storeLastSeenTitle(FILE_NAME_NEWS, articles[0]["title"])
